@@ -16,8 +16,10 @@ const userManager = new UserManager();
 const store = new InMemoryStore();
 
 // Port 8080 pe listen kar rahe hain
-server.listen(8080, () => {
-    console.log(new Date() + ' Server is listening on port 8080');
+const PORT = process.env.PORT || 8000
+
+server.listen(PORT, () => {
+    console.log(new Date() + `Server is listening on port ${PORT}`);
 });
 
 // WebSocket server attach kiya
